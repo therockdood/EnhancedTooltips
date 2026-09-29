@@ -29,7 +29,7 @@ public class DrawContextMixin {
     //? if >1.21.11 {
     //? if fabric {
     @Inject(method = "tooltip", at = @At("HEAD"), cancellable = true)
-    private void enhancedTooltips$drawTooltip(Font font, List<ClientTooltipComponent> lines, int xo, int yo, ClientTooltipPositioner positioner, @Nullable Identifier style, CallbackInfo ci) {
+    private void enhancedTooltips$drawTooltip(Font font, List<ClientTooltipComponent> lines, int xo, int yo, ClientTooltipPositioner positioner, @Nullable Identifier style, boolean extraSpaceAfterFirstLine, CallbackInfo ci) {
     //?} else {
     /*@Inject(method = "tooltip(Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;Lnet/minecraft/resources/Identifier;Lnet/minecraft/world/item/ItemStack;)V", at = @At("HEAD"), cancellable = true)
         private void enhancedTooltips$drawTooltip(Font font, List<ClientTooltipComponent> lines, int xo, int yo, ClientTooltipPositioner positioner, @Nullable Identifier style, ItemStack stack, CallbackInfo ci) {
